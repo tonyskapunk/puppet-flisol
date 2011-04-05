@@ -36,46 +36,48 @@
 
 class http {
   $package_provider = $operatingsystem ? {
-    CentOS,RedHat,Fedora => "yum",
-    Debian,Ubuntu => "apt-get";
+    /(CentOS|RedHat|Fedora)/ => 'yum',
+    /(Debian|Ubuntu)/        => 'apt'
   }
   $apache_package = $operatingsystem ? {
-    CentOS,RedHat,Fedora => "httpd",
-    Debian,Ubuntu => "apache2";
+    /(CentOS|RedHat|Fedora)/ => 'httpd',
+    /(Debian|Ubuntu)/        => 'apache2'
   }
   package {
     "$apache_package":
       ensure   => latest,
       provider => $package_provider,
   }
-  service { 'httpd':
-    enable     => true,
-    hasstatus  => true,
-    hasrestart => true,
-    requires   => Package["httpd"],
+  service {
+    "$apache_package":
+      hasstatus  => true,
+      hasrestart => true,
+      require    => Package["$apache_package"],
   }
 }
 
 class http::active inherits http {
-  Service["httpd"] {
+  Service["$apache_package"] {
+    enable => true,
     ensure => running, 
   }
 }
 
 class http::inactive inherits http {
-  Service["httpd"] {
+  Service["$apache_package"] {
+    enable => false,
     ensure => stopped,
   }
 }
 
 class http::absent inherits http {
-  Package["httpd"] {
+  Package["$apache_package"] {
     ensure => absent,
   }
 }
 
 class http::purge inherits http {
-  Package["httpd"] {
+  Package["apache_package"] {
     ensure => purged,
   }
 }
