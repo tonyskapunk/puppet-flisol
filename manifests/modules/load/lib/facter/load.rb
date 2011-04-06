@@ -1,18 +1,11 @@
 require 'facter'
-sysloads = %x{/usr/bin/uptime|awk '{print $10 $11 $12}'}.split(",").reverse
-factnames = [ "load1", "load5", "load10" ]
-factloads = Hash.new
+sysloads = %x{/usr/bin/uptime|awk '{print $10 $11 $12}'}.split(",")
+factnames = [ "load1", "load5", "load15" ]
 
 factnames.each do |factname|
-  
-
-sysloads.each do |sysload|
-  Facter.add("load1") do
+  Facter.add(factname) do
     setcode do
-      sysload.chomp
+      sysloads.pop.chomp
     end
   end
-
-
 end
-
