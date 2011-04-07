@@ -1,5 +1,5 @@
 import "nodes/*"
-import "classes*"
+import "classes/*"
 
 node default {
   notify {
