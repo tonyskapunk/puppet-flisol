@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD> 
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE> Puppet - FLISOL 2011 - <%= fqdn %></TITLE>
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		TD P { margin-bottom: 0in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT COLOR="#6b4794"><FONT SIZE=7 STYLE="font-size: 32pt">Bienvenidos a <%= hostname %></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<TABLE ALIGN=CENTER WIDTH=40% BODER=0>
+  <COL WIDTH=200>
+  <TR>
+    <TD>
+      <P STYLE="margin-bottom: 0in"><FONT COLOR="#ff950e"><B><%= fqdn %></B></FONT></P>
+      </TD>
+  </TR>
+</TABLE>
+<DL>
+  <DL>
+    <DL>
+      <DL>
+	<DD>
+	  <TABLE ALIGN=CENTER WIDTH=30% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+	    <COL WIDTH=159>
+	    <COL WIDTH=197>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT><FONT COLOR="#280099">Architecture</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= architecture %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">OS</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= operatingsystem %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">Release</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= operatingsystemrelease %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">Kernel</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= kernelversion %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">Virtual</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= virtual %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">Memory</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= memorysize %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">Swap</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= swapsize %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">Puppet</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= puppetversion %></FONT></P>
+	      </TD>
+	    </TR>
+	    <TR VALIGN=TOP>
+	      <TD WIDTH=159>
+		<P ALIGN=RIGHT STYLE="margin-left: 0.15in"><FONT COLOR="#280099">Ruby</FONT></P>
+	      </TD>
+	      <TD WIDTH=197>
+		<P ALIGN=LEFT STYLE="margin-left: 0.15in"><FONT COLOR="#6b4794"><%= rubyversion %></FONT></P>
+	      </TD>
+	    </TR>
+	  </TABLE>
+      </DL>
+    </DL>
+  </DL>
+</DL>
+<P STYLE="margin-left: 0.15in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<TABLE ALIGN=CENTER WIDTH=80% BODER=0>
+  <COL WIDTH=100>
+  <TR>
+    <TD>
+<P ALIGN=RIGHT STYLE="margin-bottom: 0in"><FONT COLOR="#280099"><FONT SIZE=1 STYLE="font-size: 8pt">Pagina autogenerada por <A href="http://puppetlabs.com">Puppet</A></FONT></FONT></P>
+      </TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>
