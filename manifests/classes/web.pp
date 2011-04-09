@@ -18,7 +18,7 @@ class web($sitename) {
       ensure => directory,
       mode   => 755;
     "/opt/www/$sitename/index.html":
-      source => template("http/$sitename.erb");
+      content => template("http/$sitename.erb");
   }
 }
 
